@@ -1,19 +1,28 @@
 import React from 'react';
-import { Container, HashtagIcon, InviteIcon, SettingsIcon } from './styles';
+import { Container, HashtagIcon, MegaphoneIcon, InviteIcon, SettingsIcon } from './styles';
 
 export interface Props {
     channelName: string;
     selected?: boolean;
+    channelCategoryType: string;
 }
 
 const ChannelButton: React.FC<Props> = ({
     channelName,
-    selected
+    selected,
+    channelCategoryType
 }) => {
     return (
         <Container className={selected ? 'active' : ''}>
             <div>
-                <HashtagIcon />
+                {
+                    channelCategoryType == 'text' ?
+                        <HashtagIcon />
+                    : channelCategoryType == 'voice' ?
+                        <MegaphoneIcon />
+                    : null
+                }
+
                 <span>{channelName}</span>
             </div>
 

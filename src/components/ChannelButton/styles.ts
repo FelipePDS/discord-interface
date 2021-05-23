@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Hashtag } from 'styled-icons/heroicons-outline';
 import { PersonAdd, Settings } from 'styled-icons/material';
+import { Megaphone } from 'styled-icons/boxicons-solid';
 
 export const Container = styled.div`
     display: flex;
@@ -9,7 +10,8 @@ export const Container = styled.div`
 
     cursor: pointer;
 
-    padding: 5px 3px;
+    margin-left: 10px;
+    padding: 5px;
 
     border-radius: 5px;
 
@@ -42,11 +44,22 @@ export const Container = styled.div`
             display: inline;
         }
     }
+
+    &+div {
+        margin-top: 2px;
+    }
 `;
 
 export const HashtagIcon = styled(Hashtag)`
     width: 20px;
     height: 20px;
+
+    color: var(--symbol);
+`;
+
+export const MegaphoneIcon = styled(Megaphone)`
+    width: 18px;
+    height: 18px;
 
     color: var(--symbol);
 `;

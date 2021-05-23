@@ -9,16 +9,20 @@ export const Container = styled.div`
 
     background-color: transparent;
 
+    &:hover {
+        background-color: var(--primary-darker-outline);
+    }
+
     &.mention {
         background-color: var(--mention-message);
 
         border-left: 2px solid var(--mention-detail);
         padding-left: 14px;
-    }
+    };
 
     & + div {
         margin-top: 13px;
-    }
+    };
 `;
 
 export const Avatar = styled.div`
@@ -30,7 +34,7 @@ export const Avatar = styled.div`
 
     &.bot {
         background-color: var(--mention-detail);
-    }
+    };
 `;
 
 export const Message = styled.div`
@@ -49,6 +53,11 @@ export const Header = styled.div`
     > strong {
         color: var(--white);
         font-size: 16px;
+    };
+
+    & strong:hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     > span {
@@ -63,14 +72,14 @@ export const Header = styled.div`
         text-transform: uppercase;
         font-weight: bold;
         font-size: 11px;
-    }
+    };
 
     > time {
         margin-left: 6px;
         
         color: var(--gray);
         font-size: 13px;
-    }
+    };
 `;
 
 export const Content = styled.div`
@@ -86,5 +95,5 @@ export const Mention = styled.span`
     
     &:hover {
         text-decoration: underline;
-    }
+    };
 `;
