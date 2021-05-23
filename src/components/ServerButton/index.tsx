@@ -2,20 +2,26 @@ import React from 'react';
 
 import logo from '../../assets/images/logo.svg';
 
-import { Button } from './styles';
+import { Button, AddIcon, ExploreIcon, DownloadIcon } from './styles';
 
 export interface Props {
     selected?: boolean;
     isHome?: boolean;
     hasNotifications?: boolean;
     mentions?: number;
+    isAddButton?: boolean;
+    isExploreButton?: boolean;
+    isDownloadButton?: boolean;
 };
 
 const ServerButton: React.FC<Props> = ({
     selected,
     isHome,
     hasNotifications,
-    mentions
+    mentions,
+    isAddButton,
+    isExploreButton,
+    isDownloadButton
 }) => {
     return (
         <Button
@@ -23,8 +29,22 @@ const ServerButton: React.FC<Props> = ({
             isHome={isHome}
             hasNotifications={hasNotifications}
             mentions={mentions}
+            isAddButton={isAddButton}
+            isExploreButton={isExploreButton}
+            isDownloadButton={isDownloadButton}
         >
-            {isHome && <img src={logo} alt="Rocketseat" />}
+            {
+                isHome ? 
+                    <img src={logo} alt="Rocketseat" />
+                : isAddButton ?
+                    <AddIcon />
+                : isExploreButton ?
+                    <ExploreIcon />
+                : isDownloadButton ?
+                    <DownloadIcon />
+                : null
+            }
+            
         </Button>
     );
 };

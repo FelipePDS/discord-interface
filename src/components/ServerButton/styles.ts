@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 import { Props } from '.';
 
+import { Add } from 'styled-icons/fluentui-system-filled';
+import { Explore } from 'styled-icons/material';
+import { DownloadOutline } from 'styled-icons/evaicons-outline';
+
 export const Button = styled.button<Props>`
     position: relative;
 
@@ -24,7 +28,7 @@ export const Button = styled.button<Props>`
 
     transition: border-radius .2s, background-color .2s;
 
-    > img {
+    > img, svg {
         width: 24px;
         height: 24px;
     }
@@ -71,8 +75,37 @@ export const Button = styled.button<Props>`
         content: '${props => props.mentions && props.mentions}';
     }
 
+    > svg {
+        color: ${
+            props => (props.isAddButton || props.isExploreButton || props.isDownloadButton) 
+                && 'var(--discord-green)'
+        };
+    }
+
     &.active, &:hover {
         border-radius: 16px;
-        background-color: ${props => props.isHome ? 'var(--rocketseat)' : 'var(--discord)'};
+        background-color: ${
+            props => props.isHome ? 
+                'var(--rocketseat)' 
+            : (props.isAddButton || props.isExploreButton || props.isDownloadButton) ? 
+                'var(--discord-green)'
+            : 'var(--discord)'
+        };
+
+        > svg {
+            color: var(--white);
+        }
     }
+`;
+
+export const AddIcon = styled(Add)`
+    
+`;
+
+export const ExploreIcon = styled(Explore)`
+    
+`;
+
+export const DownloadIcon = styled(DownloadOutline)`
+    
 `;
