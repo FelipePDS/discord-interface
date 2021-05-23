@@ -24,7 +24,8 @@ export const Title = styled.h1`
 `;
 
 export const ExpandIcon = styled(ExpandMore)`
-    width: 30px;
+    width: 28px;
+    height: 28px;
 
     color: var(--white);
 
