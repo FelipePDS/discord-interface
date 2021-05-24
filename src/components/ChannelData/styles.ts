@@ -34,6 +34,8 @@ export const Messages = styled.div`
 `;
 
 export const InputWrapper = styled.div`
+    position: relative;
+
     width: 100%;
     padding: 0 16px;
 `;
@@ -54,7 +56,7 @@ export const Input = styled.input`
     }
 
     ~ svg {
-        position: relative;
+        position: absolute;
         top: -50%;
         left: 14px;
 
