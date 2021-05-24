@@ -36,8 +36,21 @@ export const Messages = styled.div`
 export const InputWrapper = styled.div`
     position: relative;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
+    height: 68px;
     padding: 0 16px;
+
+    > svg {
+        position: absolute;
+        top: calc(50% - 12px);
+        left: 28px;
+
+        transition: 180ms ease-in-out;
+    }
 `;
 
 export const Input = styled.input`
@@ -53,14 +66,6 @@ export const Input = styled.input`
 
     &::placeholder {
         color: var(--gray);
-    }
-
-    ~ svg {
-        position: absolute;
-        top: -50%;
-        left: 14px;
-
-        transition: 180ms ease-in-out;
     }
 `;
 
