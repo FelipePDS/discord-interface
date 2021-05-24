@@ -32,6 +32,8 @@ export default createGlobalStyle`
         --gray: #8a8c90;
         --chat-input: rgb(64,68,75);
         --symbol: #74777a;
+        --icon-gray: #b9bbbe;
+        --normal-text: #dcddde;
      
         --notification: #f84a4b;
         --discord: #6e86d6;
