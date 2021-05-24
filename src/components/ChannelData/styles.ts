@@ -20,7 +20,7 @@ export const Messages = styled.div`
     overflow-y: scroll;
 
     ::-webkit-scrollbar {
-        width: px;
+        width: 8px;
     }
 
     ::-webkit-scrollbar-thumb {
