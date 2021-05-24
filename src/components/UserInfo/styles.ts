@@ -36,7 +36,7 @@ export const UserData = styled.div`
     > strong {
         display: block
 
-        font-size: 13px;
+        font-size: 11px;
         font-weight: bold;
 
         color: var(--white);
