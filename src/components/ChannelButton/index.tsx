@@ -16,9 +16,9 @@ const ChannelButton: React.FC<Props> = ({
         <Container className={selected ? 'active' : ''}>
             <div>
                 {
-                    channelCategoryType == 'text' ?
+                    channelCategoryType === 'text' ?
                         <HashtagIcon />
-                    : channelCategoryType == 'voice' ?
+                    : channelCategoryType === 'voice' ?
                         <MegaphoneIcon />
                     : null
                 }
