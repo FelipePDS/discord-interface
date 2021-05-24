@@ -2,7 +2,13 @@ import React, { useRef, useEffect } from 'react';
 
 import ChannelMessage, { Mention } from '../ChannelMessage';
 
-import { Container, Messages, InputWrapper, Input, InputIcon } from './styles';
+import { 
+    Container, 
+    Messages, 
+    InputWrapper, 
+    Input, 
+    InputIcon 
+} from './styles';
 
 const ChannelData: React.FC = () => {
     const messagesRef = useRef() as React.MutableRefObject<HTMLDivElement>;
@@ -33,6 +39,7 @@ const ChannelData: React.FC = () => {
                             date="21/06/2021"
                             content="Parabéns!!!"
                         />
+
                     </>
                 ))}
 

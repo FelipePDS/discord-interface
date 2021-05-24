@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
+import { EmojiAdd } from 'styled-icons/fluentui-system-filled';
+import { Share } from 'styled-icons/boxicons-solid';
+import { MoreHorizontalOutline } from 'styled-icons/evaicons-outline';
+
 export const Container = styled.div`
+    position: relative;
+
     display: flex;
     align-items: center;
 
@@ -23,6 +29,10 @@ export const Container = styled.div`
     & + div {
         margin-top: 13px;
     };
+
+    &:hover .message-options {
+        opacity: 1;
+    }
 `;
 
 export const Avatar = styled.div`
@@ -84,8 +94,8 @@ export const Header = styled.div`
 
 export const Content = styled.div`
     text-align: left;
-    font-size:  16px;
-    color: var(--white);
+    font-size:  1rem;
+    color: var(--normal-text);
 `;
 
 export const Mention = styled.span`
@@ -96,4 +106,55 @@ export const Mention = styled.span`
     &:hover {
         text-decoration: underline;
     };
+`;
+
+export const MessageOptions = styled.div`
+    opacity: 0;
+
+    position: absolute;
+    right: 14px;
+    top: -16px;
+
+    display: flex;
+    align-items: center;
+
+    height: 32px;
+
+    padding: 0 7px;
+
+    border-radius: 4px;
+
+    background-color: var(--primary);
+    box-shadow: 0 0 0 1px rgba(4, 4, 5, 0.15);
+
+    cursor: pointer;
+
+    transition: box-shadow .2s;
+
+    > svg {
+        width: 20px;
+        height: 20px;
+
+        color: var(--icon-gray);
+    }
+
+    > svg+svg {
+        margin-left: 12px;
+    }
+
+    &:hover {
+        box-shadow: 0 0 0 2px rgba(4, 4, 5, 0.15);
+    }
+`;
+
+export const EmoijIcon = styled(EmojiAdd)`
+
+`;
+
+export const ShareIcon  = styled(Share)` 
+
+`;
+
+export const MoreIcon  = styled(MoreHorizontalOutline)`
+
 `;

@@ -1,5 +1,16 @@
 import React from 'react';
-import { Container, Avatar, Message, Header, Content } from './styles';
+import { 
+    Container, 
+    Avatar, 
+    Message, 
+    Header, 
+    Content,
+    MessageOptions, 
+    EmoijIcon, 
+    ShareIcon, 
+    MoreIcon, 
+} from './styles';
+
 export { Mention } from './styles';
 
 export interface Props {
@@ -32,6 +43,12 @@ const ChannelMessage: React.FC<Props> = ({
 
                 <Content>{content}</Content>
             </Message>
+
+            <MessageOptions className="message-options">
+                <EmoijIcon />
+                <ShareIcon />
+                <MoreIcon />
+            </MessageOptions>
         </Container>
     );
 };
