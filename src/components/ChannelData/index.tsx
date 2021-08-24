@@ -23,7 +23,7 @@ const ChannelData: React.FC = () => {
 
     return (
         <Container>
-            <Messages>
+            <Messages ref={messagesRef}>
                 {Array.from(Array(15).keys()).map((n) => (
                     <>
                         <ChannelMessage 
